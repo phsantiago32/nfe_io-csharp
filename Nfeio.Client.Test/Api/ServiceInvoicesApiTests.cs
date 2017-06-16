@@ -44,10 +44,8 @@ namespace IO.Swagger.Test
         [TestInitialize]
         public void Init()
         {
+            Configuration.Default.ApiKey.Add("Authorization", "IZCNaN3gT9NCnjd1Cm6zCP5kK0CFeFqw9fMZNuTgR6fgobSlk8yALCf8lCUyvZZriJI");
             instance = new ServiceInvoicesApi();
-            var apiKeyHeader = new Dictionary<string, string>();
-            apiKeyHeader.Add("Authorization", "IZCNaN3gT9NCnjd1Cm6zCP5kK0CFeFqw9fMZNuTgR6fgobSlk8yALCf8lCUyvZZriJI");
-            instance.Configuration = new Configuration() { ApiKey = apiKeyHeader };
         }
 
         /// <summary>
